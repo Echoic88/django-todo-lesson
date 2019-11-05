@@ -26,7 +26,7 @@ SECRET_KEY = 'c+t8s#w)#cq&59^!cq+$4a_4^8p%yee_p1j1+7b37=ssp94xtz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('HOSTNAME')]
+ALLOWED_HOSTS = [os.getenv('HOSTNAME')]
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
     }
 
 """
