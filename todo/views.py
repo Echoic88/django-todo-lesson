@@ -39,3 +39,4 @@ def toggle_status(request, id):
     item.done = not item.done
     item.save()
     return redirect(get_todo_list)
+    
