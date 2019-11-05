@@ -31,7 +31,8 @@ SECRET_KEY = 'c+t8s#w)#cq&59^!cq+$4a_4^8p%yee_p1j1+7b37=ssp94xtz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = [os.getenv('HOSTNAME')]
+ALLOWED_HOSTS = [os.getenv('HOSTNAME'),
+                '127.0.0.1']
 
 
 # Application definition
