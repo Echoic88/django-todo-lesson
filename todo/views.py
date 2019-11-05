@@ -5,7 +5,7 @@ from .forms import ItemForm
 # Create your views here.
 def get_todo_list(request):
     results = Item.objects.all()
-    return render(request, "todo_list.html", {
+    return render(request, "todo-list.html", {
         'items': results
     })
 
@@ -18,7 +18,7 @@ def create_an_item(request):
     else:
         form = ItemForm()
        
-    return render(request, "item_form.html", {"form":form})
+    return render(request, "item-form.html", {"form":form})
 
 
 def edit_an_item(request, id):
@@ -31,7 +31,7 @@ def edit_an_item(request, id):
     else:
         form = ItemForm(instance = item)
 
-    return render(request, "item_form.html", {"form":form})
+    return render(request, "item-form.html", {"form":form})
 
 
 def toggle_status(request, id):
